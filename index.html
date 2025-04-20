@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>He is Risen - Easter Celebration</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    @keyframes rollAway {
+      0% { transform: translateX(-50%) rotate(0); }
+      100% { transform: translateX(200%) rotate(1080deg); opacity: 0; }
+    }
+    @keyframes lightShine {
+      0% { width: 0; }
+      100% { width: 100vw; }
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    @keyframes slideUp {
+      to { opacity: 1; transform: translateY(-10px); }
+    }
+    @keyframes floatIcons {
+      0% { transform: translateY(0) rotate(0); opacity: 0.2; }
+      50% { transform: translateY(-30px) rotate(20deg); opacity: 0.5; }
+      100% { transform: translateY(-60px) rotate(45deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-black via-slate-900 to-slate-800 text-yellow-100 font-sans overflow-x-hidden">
+  <!-- Floating Icons -->
+  <div class="absolute inset-0 -z-10 pointer-events-none">
+    <div class="absolute top-[90%] left-[10%] animate-[floatIcons_12s_linear_infinite] text-white/20">
+      <i data-lucide="heart" class="w-6 h-6"></i>
+    </div>
+    <div class="absolute top-[95%] left-[40%] animate-[floatIcons_14s_linear_infinite] text-yellow-200/20">
+      <i data-lucide="cross" class="w-6 h-6"></i>
+    </div>
+    <div class="absolute top-[98%] left-[70%] animate-[floatIcons_10s_linear_infinite] text-red-200/20">
+      <i data-lucide="heart" class="w-5 h-5"></i>
+    </div>
+  </div>
+
+  <!-- Resurrection Animation -->
+  <div class="relative flex flex-col justify-center items-center h-screen w-screen text-center">
+    <div class="absolute w-0 h-full bg-gradient-radial from-yellow-100 to-white animate-[lightShine_3s_ease-out_forwards] [animation-delay:4s] z-0"></div>
+
+    <div class="w-48 h-48 md:w-64 md:h-64 bg-gray-700 rounded-full absolute bottom-20 left-1/2 transform -translate-x-1/2 z-10 animate-[rollAway_6s_ease-out_forwards] [animation-delay:2s]"></div>
+
+    <div class="text-3xl md:text-5xl font-bold opacity-0 animate-[fadeIn_2s_ease_forwards] [animation-delay:5s] z-20">
+      He is risen. Death could not hold Him.
+    </div>
+
+    <div class="mt-6 text-lg md:text-xl opacity-0 animate-[slideUp_1.5s_ease_forwards] [animation-delay:7s] z-20">
+      <p><strong>Matthew 28:6</strong> - "He is not here; for He is risen, as He said."</p>
+      <p class="mt-2"><strong>Acts 2:24</strong> - "But God raised Him up, loosing the pangs of death..."</p>
+    </div>
+
+    <!-- Cross fade-in -->
+    <div class="absolute top-10 right-10 opacity-0 animate-[fadeIn_2s_ease_forwards] [animation-delay:8s] z-10">
+      <i data-lucide="cross" class="w-12 h-12 text-white/30"></i>
+    </div>
+  </div>
+
+  <!-- Easter Message -->
+  <div class="px-6 md:px-12 text-center mt-10 opacity-0 animate-[fadeIn_2s_ease_forwards] [animation-delay:9s]">
+    <h2 class="text-2xl md:text-3xl font-semibold text-yellow-200">Happy Easter from Muhwezi Donald Hastings</h2>
+    <p class="mt-4 text-lg md:text-xl text-yellow-100 max-w-2xl mx-auto">
+      This resurrection reminds us of the depth of Christ’s love for us. His victory over death is our hope and joy. Because He lives, we too live!
+    </p>
+  </div>
+
+  <!-- Share Button -->
+  <div class="flex justify-center mt-6 opacity-0 animate-[fadeIn_2s_ease_forwards] [animation-delay:10s]">
+    <a href="https://wa.me/?text=Celebrate%20Resurrection%20Sunday%20with%20this%20beautiful%20page!%20https://your-link.com" target="_blank"
+      class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded inline-flex items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M16.988 13.589c-.283-.141-1.676-.832-1.936-.926-.259-.096-.448-.141-.636.141-.189.283-.732.926-.898 1.115-.166.189-.331.212-.614.071-.283-.141-1.196-.441-2.28-1.407-.841-.749-1.409-1.675-1.574-1.958-.165-.283-.018-.436.124-.577.127-.127.283-.331.424-.496.141-.165.188-.283.283-.472.094-.189.047-.354-.023-.496-.071-.141-.636-1.536-.87-2.106-.229-.548-.462-.474-.636-.483l-.542-.009c-.188 0-.495.071-.755.354s-.99.967-.99 2.361c0 1.394 1.013 2.741 1.154 2.93.141.189 1.993 3.038 4.832 4.257.676.291 1.204.464 1.615.595.679.217 1.296.187 1.785.114.544-.081 1.676-.684 1.913-1.343.236-.659.236-1.223.165-1.343-.071-.118-.26-.189-.542-.33z" />
+      </svg>
+      Share with Friends & Family
+    </a>
+  </div>
+
+  <audio controls autoplay loop class="fixed bottom-4 left-4 z-50">
+    <source src="./Todd Dulaney - The Anthem.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
